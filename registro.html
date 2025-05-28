@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Elector - Votación Bolivia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light">
+    <header class="bg-dark-blue text-white py-3 shadow">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="text-white text-decoration-none">
+                    <i class="fas fa-arrow-left me-2"></i>Volver al inicio
+                </a>
+                <h5 class="mb-0">Tribunal Electoral Plurinacional</h5>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-header bg-dark-blue text-white">
+                            <h4 class="mb-0">Registro de Elector</h4>
+                        </div>
+                        <div class="card-body p-4 p-md-5">
+                            <form id="registroForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="ci" class="form-label">Cédula de Identidad *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                                            <input type="text" class="form-control" id="ci" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="expedido" class="form-label">Expedido en *</label>
+                                        <select class="form-select" id="expedido" required>
+                                            <option value="" selected disabled>Seleccione...</option>
+                                            <option value="LP">La Paz</option>
+                                            <option value="CB">Cochabamba</option>
+                                            <option value="SC">Santa Cruz</option>
+                                            <option value="OR">Oruro</option>
+                                            <option value="PT">Potosí</option>
+                                            <option value="TJ">Tarija</option>
+                                            <option value="CH">Chuquisaca</option>
+                                            <option value="BN">Beni</option>
+                                            <option value="PD">Pando</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="nombres" class="form-label">Nombres *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            <input type="text" class="form-control" id="nombres" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="apellidos" class="form-label">Apellidos *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                            <input type="text" class="form-control" id="apellidos" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Correo electrónico *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <small class="text-muted">Será su nombre de usuario</small>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="telefono" class="form-label">Teléfono/Celular *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                            <input type="tel" class="form-control" id="telefono" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="departamento" class="form-label">Departamento *</label>
+                                        <select class="form-select" id="departamento" required>
+                                            <option value="" selected disabled>Seleccione...</option>
+                                            <option value="La Paz">La Paz</option>
+                                            <option value="Cochabamba">Cochabamba</option>
+                                            <option value="Santa Cruz">Santa Cruz</option>
+                                            <option value="Oruro">Oruro</option>
+                                            <option value="Potosí">Potosí</option>
+                                            <option value="Tarija">Tarija</option>
+                                            <option value="Chuquisaca">Chuquisaca</option>
+                                            <option value="Beni">Beni</option>
+                                            <option value="Pando">Pando</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="nacimiento" class="form-label">Fecha de Nacimiento *</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                            <input type="date" class="form-control" id="nacimiento" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="terminos" required>
+                                        <label class="form-check-label" for="terminos">
+                                            Acepto los <a href="#" data-bs-toggle="modal" data-bs-target="#terminosModal">términos y condiciones</a> del sistema
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-user-plus me-2"></i>Registrarse
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer bg-light text-center">
+                            <p class="mb-0">¿Ya tiene una cuenta? <a href="login.html" class="text-decoration-none">Inicie sesión aquí</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info mt-4">
+                        <i class="fas fa-info-circle me-2"></i> <strong>Importante:</strong> Su correo electrónico será su nombre de usuario y su cédula de identidad será su contraseña para iniciar sesión.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Términos y Condiciones -->
+    <div class="modal fade" id="terminosModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-dark-blue text-white">
+                    <h5 class="modal-title">Términos y Condiciones</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>1. Uso del Sistema de Votación Electrónica</h6>
+                    <p>El sistema es provisto por el Tribunal Electoral Plurinacional de Bolivia para facilitar el ejercicio del voto en las elecciones nacionales.</p>
+                    
+                    <h6>2. Responsabilidades del Elector</h6>
+                    <p>El elector es responsable de mantener la confidencialidad de sus credenciales y de la veracidad de la información proporcionada.</p>
+                    
+                    <h6>3. Protección de Datos</h6>
+                    <p>Los datos personales serán protegidos conforme a la Ley N° 026 del Régimen Electoral y solo serán utilizados para fines electorales.</p>
+                    
+                    <h6>4. Carácter del Voto</h6>
+                    <p>El voto emitido a través de este sistema es secreto, personal, igualitario, directo, libre y obligatorio, conforme a la Constitución Política del Estado.</p>
+                    
+                    <h6>5. Sanciones</h6>
+                    <p>Cualquier intento de fraude o suplantación de identidad será sancionado conforme a la ley electoral boliviana.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark-blue text-white py-3 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2025 Tribunal Electoral Plurinacional de Bolivia</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js\auth.js"></script>
+</body>
+</html>

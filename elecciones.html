@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elecciones Nacionales Bolivia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="bg-dark-blue text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-2 text-center">
+                    <img src="img\Bandera_de_Bolivia_(Estado).svg.png" alt="Bandera Bolivia" class="img-fluid flag-img">
+                </div>
+                <div class="col-md-8 text-center">
+                    <h1>Elecciones Nacionales Bolivia 2025</h1>
+                    <p class="lead mb-0">Ejerce tu derecho al voto</p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <img src="img\Escudo_de_Bolivia.svg.png" alt="Escudo Bolivia" class="img-fluid shield-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarElectoral">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarElectoral">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="estadisticas.html"><i class="fas fa-chart-bar me-1"></i> Estadísticas</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <span class="navbar-text text-white me-3">
+                        <i class="fas fa-user me-1"></i> <span id="nombreUsuario">Usuario</span>
+                    </span>
+                    <a href="index.html" class="btn btn-outline-light btn-sm">
+                        <i class="fas fa-sign-out-alt me-1"></i> Salir
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i> Selecciona el binomio presidencial de tu preferencia y haz clic en "Votar".
+            </div>
+
+            <h2 class="text-center mb-5">Candidatos Presidenciales</h2>
+            
+            <div class="row" id="candidatos-container">
+                <!-- Candidatos se cargarán aquí -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark-blue text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Elecciones Nacionales 2025</h5>
+                    <p>Sistema oficial de votación electrónica.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="estadisticas.html" class="btn btn-outline-light">
+                        <i class="fas fa-chart-bar me-2"></i>Ver Estadísticas
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p class="mb-0">© 2025 Tribunal Electoral Plurinacional de Bolivia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de confirmación -->
+    <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-dark-blue text-white">
+                    <h5 class="modal-title">Confirmar voto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="confirmacionModalBody">
+                    ¿Estás seguro de votar por...?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="confirmarVoto">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
